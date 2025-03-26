@@ -28,4 +28,4 @@ def calc_eff(filepath):
     with open('/home/a200161455/projects/WAB5_Lightrag/updated_data.json', 'w') as file:
         json.dump(json_data, file, indent=4)
     print(json_data[:10])
-calc_eff("/home/a200161455/projects/WAB5_Lightrag/output_wo_eff.json")
+calc_eff("path to/output_wo_eff.json")
