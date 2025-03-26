@@ -78,7 +78,7 @@ def itterate_over(root_folder):
     with open('output_wo_eff.json', 'w') as f:
         json.dump(results, f, indent=2)
 
-itterate_over("path to/WAB5_Lightrag/outputs_llama")
+itterate_over("path to/WAB5_Lightrag/outputs")
 
 
 
