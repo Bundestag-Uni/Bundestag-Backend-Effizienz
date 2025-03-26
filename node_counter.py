@@ -33,6 +33,6 @@ def extract_graphml_info_to_dataframe(file_path):
         return pd.DataFrame()
 
 # Example usage
-file_path = '/home/a200161455/projects/WAB5_Lightrag/outputs/KG_ID2011500300/graph_chunk_entity_relation.graphml'
+file_path = 'pathto  /outputs/KG_ID2011500300/graph_chunk_entity_relation.graphml'
 result_df = extract_graphml_info_to_dataframe(file_path)
 print(result_df)
