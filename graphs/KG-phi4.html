@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 100vh;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#4713fd", "description": "\"Non-governmental organizations (NGOs) are involved in discussions about domestic violence, providing support and advocacy for affected women.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"NICHTREGIERUNGSORGANISATIONEN\"", "label": "\"NICHTREGIERUNGSORGANISATIONEN\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"Non-governmental organizations (NGOs) are involved in discussions about domestic violence, providing support and advocacy for affected women.\""}, {"color": "#0f4dde", "description": "\"A collective reference to the audience or members of a debate discussing significant social issues such as domestic violence.\"", "entity_type": "\"CATEGORY\"", "id": "\"DAMEN UND HERREN\"", "label": "\"DAMEN UND HERREN\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"A collective reference to the audience or members of a debate discussing significant social issues such as domestic violence.\""}, {"color": "#67a03c", "description": "\"Support initiatives work alongside NGOs to assist victims of domestic violence, offering refuge and counseling services.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"UNTERST\u00dcTZUNGSINITIATIVEN\"", "label": "\"UNTERST\u00dcTZUNGSINITIATIVEN\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"Support initiatives work alongside NGOs to assist victims of domestic violence, offering refuge and counseling services.\""}, {"color": "#ac83a4", "description": "\"Women\u0027s shelters provide safe havens for women escaping domestic violence, though their capacity is limited as mentioned in the debate.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"FRAUENH\u00c4USERN\"", "label": "\"FRAUENH\u00c4USERN\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"Women\u0027s shelters provide safe havens for women escaping domestic violence, though their capacity is limited as mentioned in the debate.\""}, {"color": "#5a5d5a", "description": "\"Frau Pr\u00e4sidentin is addressed as the presiding figure in a debate about domestic violence in Germany.\"", "entity_type": "\"PERSON\"", "id": "\"FRAU PR\u00c4SIDENTIN\"", "label": "\"FRAU PR\u00c4SIDENTIN\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"Frau Pr\u00e4sidentin is addressed as the presiding figure in a debate about domestic violence in Germany.\""}, {"color": "#29bdac", "description": "\"Germany is the country where domestic violence statistics and policies are being discussed, highlighting its societal challenges and legal framework.\"", "entity_type": "\"GEO\"", "id": "\"DEUTSCHLAND\"", "label": "\"DEUTSCHLAND\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"Germany is the country where domestic violence statistics and policies are being discussed, highlighting its societal challenges and legal framework.\""}, {"color": "#37b35a", "description": "\"The German Bundestag is the federal parliament involved in legislative discussions and decisions on social issues like domestic violence.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"DEUTSCHE BUNDESTAG\"", "label": "\"DEUTSCHE BUNDESTAG\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"The German Bundestag is the federal parliament involved in legislative discussions and decisions on social issues like domestic violence.\""}, {"color": "#c57495", "description": "\"The Free Democratic Party (FDP) collaborates with other parties to influence policies, including those related to domestic violence protection measures.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"FDP\"", "label": "\"FDP\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"The Free Democratic Party (FDP) collaborates with other parties to influence policies, including those related to domestic violence protection measures.\""}, {"color": "#7856c7", "description": "\"The Social Democratic Party (SPD) is a major political party in Germany that has been part of coalition governments addressing social issues like domestic violence.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"SPD\"", "label": "\"SPD\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"The Social Democratic Party (SPD) is a major political party in Germany that has been part of coalition governments addressing social issues like domestic violence.\""}, {"color": "#57f748", "description": "\"An international treaty aimed at preventing and combating violence against women and domestic violence, which Germany is committed to implementing.\"", "entity_type": "\"EVENT\"", "id": "\"ISTANBUL-KONVENTION\"", "label": "\"ISTANBUL-KONVENTION\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"An international treaty aimed at preventing and combating violence against women and domestic violence, which Germany is committed to implementing.\""}, {"color": "#d68129", "description": "\"Refers to political parties such as the Union (CDU/CSU) involved in governance, impacting policy decisions about domestic violence.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"UNION\"", "label": "\"UNION\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"Refers to political parties such as the Union (CDU/CSU) involved in governance, impacting policy decisions about domestic violence.\""}, {"color": "#b850e7", "description": "\"A German political party that has held government responsibilities and contributed to debates on social justice issues, such as domestic violence.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"B\u00dcNDNIS 90/DIE GR\u00dcNEN\"", "label": "\"B\u00dcNDNIS 90/DIE GR\u00dcNEN\"", "shape": "dot", "size": 10, "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"A German political party that has held government responsibilities and contributed to debates on social justice issues, such as domestic violence.\""}]);
+                  edges = new vis.DataSet([{"description": "\"The members of parliament and other stakeholders engage with NGOs to understand and address domestic violence more effectively.\"", "from": "\"NICHTREGIERUNGSORGANISATIONEN\"", "keywords": "\"collaboration, advocacy\"", "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"The members of parliament and other stakeholders engage with NGOs to understand and address domestic violence more effectively.\"", "to": "\"DAMEN UND HERREN\"", "width": 7.0}, {"description": "\"Support initiatives work alongside women\u0027s shelters, both striving to provide aid and refuge for victims of domestic violence.\"", "from": "\"UNTERST\u00dcTZUNGSINITIATIVEN\"", "keywords": "\"collaboration, victim support\"", "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"Support initiatives work alongside women\u0027s shelters, both striving to provide aid and refuge for victims of domestic violence.\"", "to": "\"FRAUENH\u00c4USERN\"", "width": 7.0}, {"description": "\"As presiding figure, Frau Pr\u00e4sidentin addresses the issue of domestic violence within Germany, setting the context for national policy discussion.\"", "from": "\"FRAU PR\u00c4SIDENTIN\"", "keywords": "\"leadership, national policy\"", "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"As presiding figure, Frau Pr\u00e4sidentin addresses the issue of domestic violence within Germany, setting the context for national policy discussion.\"", "to": "\"DEUTSCHLAND\"", "width": 8.0}, {"description": "\"The German Bundestag discusses the inadequacy of women\u0027s shelters in handling the volume of cases related to domestic violence and considers legislative solutions.\"", "from": "\"DEUTSCHE BUNDESTAG\"", "keywords": "\"legislative discussion, social support\"", "source_id": "chunk-7fcf64b18fb7490112842ca821721b5b", "title": "\"The German Bundestag discusses the inadequacy of women\u0027s shelters in handling the volume of cases related to domestic violence and considers legislative solutions.\"", "to": "\"FRAUENH\u00c4USERN\"", "width": 8.0}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
