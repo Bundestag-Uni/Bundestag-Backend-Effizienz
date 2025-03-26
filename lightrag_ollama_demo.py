@@ -13,7 +13,7 @@ from transformers import AutoModel, AutoTokenizer
 
 
 import json
-with open("pathto/WAB5_Lightrag/mydataset/YOUR_DATASET.json", "r", encoding="utf-16") as file:
+with open("pathto  mydataset/YOUR_DATASET.json", "r", encoding="utf-16") as file:
     data = json.load(file)
 df = pd.DataFrame(data)
 
@@ -31,7 +31,7 @@ logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.INFO)
 def itterate_over_dataset():
     for index, row in df.iterrows():
 
-        WORKING_DIR = "path to/WAB5_Lightrag/outputs_llama/KG_" + row["id"]
+        WORKING_DIR = "path to  /outputs/KG_" + row["id"]
         if not os.path.exists(WORKING_DIR):
             os.mkdir(WORKING_DIR)
             
@@ -69,7 +69,7 @@ def itterate_over_dataset():
 
 
 def test_creation():
-    WORKING_DIR = "path to/WAB5_Lightrag/outputs/test"
+    WORKING_DIR = "path to  /outputs/test"
     if not os.path.exists(WORKING_DIR):
         os.mkdir(WORKING_DIR)
             
