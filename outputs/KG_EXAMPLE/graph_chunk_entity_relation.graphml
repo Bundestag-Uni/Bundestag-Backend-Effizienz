@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d5" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d4" for="edge" attr.name="description" attr.type="string"/>
+<key id="d3" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d2" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d1" for="node" attr.name="description" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="&quot;KRITIKPUNKTE&quot;">
+  <data key="d0">"CATEGORY"</data>
+  <data key="d1">"Criticisms mentioned regarding the proposals for forming all committees immediately without considering practical constraints."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;PARLAMENT&quot;">
+  <data key="d0">"ORGANIZATION"</data>
+  <data key="d1">"The legislative body responsible for making and passing laws; discussed as needing to remain operational through interim solutions like the Hauptausschuss."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;GRÜNEN (DIE GRÜNEN)&quot;">
+  <data key="d0">"ORGANIZATION"</data>
+  <data key="d1">"The Green Party, one of the political parties mentioned as seeking to establish parliamentary committees."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;HAUPTAUSSCHUSS&quot;">
+  <data key="d0">"EVENT"</data>
+  <data key="d1">"A main committee proposed for establishment to manage parliamentary work before the government formation is complete."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;FRAKTION DER GRÜNEN&quot;">
+  <data key="d0">"ORGANIZATION (SUBGROUP)"</data>
+  <data key="d1">"The faction or parliamentary group of the Green Party within the Bundestag, involved in legislative processes and decision-making."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;FRAU HASSELMANN&quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"An individual from the Left Party mentioned in relation to proposing an agenda concerning the formation of all committees."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;LINKEN (DIE LINKE)&quot;">
+  <data key="d0">"ORGANIZATION"</data>
+  <data key="d1">"The Left Party, another political party involved in discussions about committee formation within the Bundestag."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;RESSORTZUSCHNEIDUNG&quot;">
+  <data key="d0">"CONCEPT (RELATED TO ADMINISTRATIVE ORGANIZATION)"</data>
+  <data key="d1">"The division of governmental responsibilities among different departments, a factor affecting committee formation timing and structure."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;BUNDESTAGSWAHLEN&quot;">
+  <data key="d0">"EVENT"</data>
+  <data key="d1">"Federal elections in Germany, which lead to government formation periods and potential coalition building."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;PARLAMENTARISMUS&quot;">
+  <data key="d0">"CATEGORY"</data>
+  <data key="d1">"Parliamentary system; refers to the practice of governance by elected representatives, which has been evolving and improving over decades according to the text."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;REGIERUNG&quot;">
+  <data key="d0">"ORGANIZATION"</data>
+  <data key="d1">"Refers to the government of Germany, which is formed following Bundestag elections."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;FRAKTION DER LINKEN&quot;">
+  <data key="d0">"ORGANIZATION (SUBGROUP)"</data>
+  <data key="d1">"The faction or parliamentary group of the Left Party within the Bundestag, involved in proposing certain legislative actions like forming all committees."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;KOALITIONEN&quot;">
+  <data key="d0">"CATEGORY"</data>
+  <data key="d1">"Coalitions formed when no party gains an absolute majority in Bundestag elections, a common political process in German governance."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;PLENARSITZUNGEN&quot;">
+  <data key="d0">"EVENT"</data>
+  <data key="d1">"Plenary sessions held within the Bundestag to maintain its operational capacity during periods when the government is not fully formed."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;BUNDESREPUBLIK DEUTSCHLAND&quot;">
+  <data key="d0">"GEO"</data>
+  <data key="d1">"The Federal Republic of Germany, a country in Europe where the described parliamentary processes take place."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<node id="&quot;BUNDESTAG&quot;">
+  <data key="d0">"ORGANIZATION"</data>
+  <data key="d1">"The national legislature and parliament of Germany, which plays a key role in government formation after elections."</data>
+  <data key="d2">chunk-577aea9d428373326d09725e91e85867</data>
+</node>
+<edge source="&quot;GRÜNEN (DIE GRÜNEN)&quot;" target="&quot;FRAKTION DER GRÜNEN&quot;">
+  <data key="d3">8.0</data>
+  <data key="d4">"The Green Party operates through its parliamentary faction to influence legislation and committee formation processes."</data>
+  <data key="d5">"Political Influence, Legislative Role"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;GRÜNEN (DIE GRÜNEN)&quot;" target="&quot;BUNDESTAG&quot;">
+  <data key="d3">14.0</data>
+  <data key="d4">"The Bundestag engages with political parties like the Greens for committee formations and legislative processes."</data>
+  <data key="d5">"Governance, Legislative Process"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;GRÜNEN (DIE GRÜNEN)&quot;" target="&quot;HAUPTAUSSCHUSS&quot;">
+  <data key="d3">12.0</data>
+  <data key="d4">"The Green Party is involved in discussions about setting up a main committee (Hauptausschuss) for interim governance."</data>
+  <data key="d5">"Interim Governance, Committee Setup"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;HAUPTAUSSCHUSS&quot;" target="&quot;LINKEN (DIE LINKE)&quot;">
+  <data key="d3">14.0</data>
+  <data key="d4">"The Left Party's proposal is related to the formation of a Hauptausschuss as part of parliamentary operations."</data>
+  <data key="d5">"Proposal, Parliamentary Efficiency"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;LINKEN (DIE LINKE)&quot;" target="&quot;BUNDESTAG&quot;">
+  <data key="d3">14.0</data>
+  <data key="d4">"The Bundestag interacts with the Left Party concerning procedural aspects of parliamentary operations."</data>
+  <data key="d5">"Political Procedure, Committee Formation"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;LINKEN (DIE LINKE)&quot;" target="&quot;FRAKTION DER LINKEN&quot;">
+  <data key="d3">7.0</data>
+  <data key="d4">"The Left Party's activities in parliament are conducted through its specific faction, which seeks to establish all committees promptly."</data>
+  <data key="d5">"Committee Proposal, Political Strategy"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;RESSORTZUSCHNEIDUNG&quot;" target="&quot;REGIERUNG&quot;">
+  <data key="d3">6.0</data>
+  <data key="d4">"The structure of the government is influenced by how responsibilities are divided among departments, affecting committee formation."</data>
+  <data key="d5">"Government Structure, Administrative Organization"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;BUNDESTAGSWAHLEN&quot;" target="&quot;REGIERUNG&quot;">
+  <data key="d3">8.0</data>
+  <data key="d4">"Federal elections lead to the formation of a new government."</data>
+  <data key="d5">"Elections, Government Formation"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;PARLAMENTARISMUS&quot;" target="&quot;BUNDESTAG&quot;">
+  <data key="d3">16.0</data>
+  <data key="d4">"The concept of Parliamentarianism has evolved alongside the activities and improvements within the Bundestag."</data>
+  <data key="d5">"Evolution, Governance Improvement"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+<edge source="&quot;KOALITIONEN&quot;" target="&quot;BUNDESTAG&quot;">
+  <data key="d3">7.0</data>
+  <data key="d4">"The need for coalitions arises from election outcomes that do not result in absolute majorities within the Bundestag."</data>
+  <data key="d5">"Coalition Building, Parliamentary Politics"</data>
+  <data key="d6">chunk-577aea9d428373326d09725e91e85867</data>
+</edge>
+</graph></graphml>
